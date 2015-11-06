@@ -1,6 +1,7 @@
 package com.zhao.firstapp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -25,15 +26,28 @@ public class FirstActivity extends Activity {
         setContentView(R.layout.first_layout);
 
 
-        //设置监听器
         mButton_1 =(Button)findViewById(R.id.button_1);//button_1实例化
         mButton_1.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
+/*
+                   点击按钮销毁activity
+
                 Log.d("Zhao", "监听器触发");
-                Toast.makeText(FirstActivity.this, "This is Button_one!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(FirstActivity.this, "该活动被销毁", Toast.LENGTH_SHORT).show();
+                finish();//销毁当前活动
+*/
+                /**
+                 * 启动一个新的Activity
+                 */
+                Intent intent=new Intent(FirstActivity.this,SecondActivity.class);
+                startActivity(intent);//启动新的Activity 将intent对象传入startActivity方法
+                Toast.makeText(FirstActivity.this, R.string.create_second_activity, Toast.LENGTH_SHORT).show();
+                Log.d("Zhao",getString(R.string.create_second_activity));
             }
         });
+        //设置监听器
     }
 
     /**

@@ -3,4 +3,5 @@
     <string name="button_1">Button one</string>
     <string name="add_item">Add</string>
     <string name="remove_item">Remove</string>
+    <string name="create_second_activity">启动SecondActivity</string>
 </resources>
