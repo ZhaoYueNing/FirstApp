@@ -15,7 +15,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SecondActivity"></activity>
+        <activity android:name=".SecondActivity">
+            <!--定义活动可以响应的action和category-->
+            <intent-filter>
+                <action android:name="com.zhao.activitytest.ACTION_START"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.zhao.activitytest.MY_CATEGORY"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
