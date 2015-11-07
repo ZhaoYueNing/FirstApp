@@ -41,7 +41,8 @@ public class FirstActivity extends Activity {
 //                Intent intent=new Intent("com.zhao.activitytest.ACTION_START");//隐式intent
 //                intent.addCategory("com.zhao.activitytest.MY_CATEGORY");//为intent添加category匹配
                 Intent intent=new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("http://github.com/zhaoyuening"));//调用浏览器打开网页
+                intent.setData(Uri
+                        .parse("http://github.com/zhaoyuening"));//调用浏览器打开网页
                 startActivity(intent);//启动新的Activity 将intent对象传入startActivity方法
                 Toast.makeText(FirstActivity.this, R.string.create_second_activity, Toast.LENGTH_SHORT).show();
                 Log.d("Zhao", getString(R.string.create_second_activity));
