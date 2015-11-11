@@ -13,4 +13,10 @@
         android:layout_height="wrap_content"
         android:text="Button 5"
         android:id="@+id/button_5"/>
+    <Button
+        android:id="@+id/button_6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="启动Activity周期演示 6"
+        />
 </LinearLayout>

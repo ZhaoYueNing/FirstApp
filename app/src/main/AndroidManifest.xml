@@ -20,17 +20,21 @@
             <!-- 定义活动可以响应的action和category -->
             <intent-filter>
                 <action android:name="com.zhao.activitytest.ACTION_START" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="com.zhao.activitytest.MY_CATEGORY" />
             </intent-filter>
         </activity>
         <activity android:name=".ThirdActivity" >
             <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <!--响应网页-->
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- 响应网页 -->
                 <data android:scheme="http" />
             </intent-filter>
+        </activity>
+        <activity android:name=".FourthActivity" >
         </activity>
     </application>
 
